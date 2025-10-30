@@ -1,0 +1,8 @@
+﻿<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="60" fill="#0a0a0f"/>
+  
+  <!-- Bold eS text - joined together -->
+  <text x="60" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#00f5ff">e</text>
+  <text x="78" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffd700">S</text>
+</svg>
