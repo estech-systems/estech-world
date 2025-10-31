@@ -27,10 +27,11 @@ const EntranceExperience = () => {
         <button className="enter-btn" onClick={goToLogin}>
           Login to Ecosystem
         </button>
-      </div>
-
-      <div className="entrance-footer">
+        <br></br>
+        <br></br>
+        <div className="entrance-footer">
         <p>A G9TE WORLD Enterprise</p>
+      </div>
       </div>
     </div>
   )
