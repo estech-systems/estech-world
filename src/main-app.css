@@ -8,37 +8,17 @@ body {
   background: #0a0a0f;
   color: white;
   position: relative;
-  padding: 1rem; /* Added padding for mobile */
+  padding: 1rem;
+  padding-top: 4rem; /* Space for fixed navigation */
+  display: flex;
+  flex-direction: column;
 }
 
-.nav-header {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 100;
-}
-
-.back-button {
-  padding: 0.5rem 1rem;
-  background: rgba(0, 245, 255, 0.1);
-  border: 1px solid #00f5ff;
-  border-radius: 6px;
-  color: #00f5ff;
-  font-family: inherit;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.back-button:hover {
-  background: rgba(0, 245, 255, 0.2);
-  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
-}
-
-/* Enhanced logo styling */
 .header-section {
   text-align: center;
   margin-bottom: 1rem;
-  padding-top: 4rem; /* Space for navigation */
+  padding: 1rem 0;
+  flex-shrink: 0; /* Prevent logo section from shrinking */
 }
 
 .logo {
@@ -59,14 +39,19 @@ body {
   margin-bottom: 2rem;
 }
 
+.content-section {
+  flex: 1;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .ecosystem-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .ecosystem-card {
@@ -86,7 +71,7 @@ body {
 
 .cta-section {
   margin: 2rem 0;
-  padding: 0 1rem; /* Added padding for mobile */
+  padding: 0 1rem;
 }
 
 .cta-title {
@@ -127,9 +112,10 @@ body {
 
 .footer {
   margin-top: 3rem;
-  padding: 2rem 1rem; /* Added horizontal padding */
+  padding: 2rem 1rem;
   border-top: 1px solid rgba(0,245,255,0.3);
   text-align: center;
+  flex-shrink: 0; /* Prevent footer from moving up */
 }
 
 .contact-link {
@@ -151,29 +137,34 @@ body {
   opacity: 0.7;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - Better logo visibility */
 @media (max-width: 768px) {
   .main-container {
     padding: 0.5rem;
-  }
-
-  .nav-header {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin-bottom: 1rem;
+    padding-top: 3.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .header-section {
-    padding-top: 1rem;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
   }
 
   .logo {
-    height: 80px;
+    height: 70px;
+    margin-bottom: 0.3rem;
   }
 
   .main-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 
   .ecosystem-grid {
@@ -209,7 +200,7 @@ body {
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .card-title {
@@ -218,5 +209,9 @@ body {
 
   .cta-title {
     font-size: 1.3rem;
+  }
+
+  .logo {
+    height: 60px;
   }
 }

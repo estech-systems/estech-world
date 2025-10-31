@@ -8,7 +8,6 @@ body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   background: #0a0a0f;
   color: #00f5ff;
-  /* REMOVED overflow: hidden - this was blocking all scrolling */
 }
 
 .entrance-container {
@@ -19,7 +18,8 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
-  padding: 1rem; /* Added padding for mobile */
+  padding: 1rem;
+  padding-top: 3.5rem; /* Reduced space for fixed navigation */
 }
 
 .cyber-grid {
@@ -45,16 +45,20 @@ body {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 2rem;
-  width: 100%; /* Ensure full width on mobile */
+  padding: 1.5rem; /* Reduced padding */
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo-section {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced margin */
 }
 
 .main-logo {
-  height: 180px;
+  height: 150px; /* Slightly smaller for mobile */
   filter: drop-shadow(0 0 25px rgba(0, 245, 255, 0.8));
   animation: chipGlow 3s ease-in-out infinite alternate;
 }
@@ -71,13 +75,13 @@ body {
 }
 
 .text-section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem; /* Reduced margin */
 }
 
 .company-name {
-  font-size: 3.5rem;
+  font-size: 3rem; /* Slightly smaller */
   font-weight: 700;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0; /* Reduced margin */
   background: linear-gradient(135deg, #00f5ff 0%, #ffd700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -86,19 +90,19 @@ body {
 }
 
 .tagline {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Slightly smaller */
   color: #ffd700;
-  margin-top: 1rem;
+  margin-top: 0.8rem; /* Reduced margin */
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
 .enter-btn {
-  padding: 1.2rem 3rem;
+  padding: 1rem 2.5rem; /* Slightly smaller */
   background: linear-gradient(45deg, #00f5ff, #00ff41);
   border: none;
   border-radius: 10px;
   color: #0a0a0f;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -107,6 +111,7 @@ body {
   box-shadow: 0 0 25px rgba(0, 245, 255, 0.5);
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem; /* Space before footer */
 }
 
 .enter-btn:hover {
@@ -130,62 +135,74 @@ body {
 }
 
 .entrance-footer {
-  position: absolute;
-  bottom: 2rem;
   color: rgba(255, 215, 0, 0.7);
   font-weight: 600;
   width: 100%;
   text-align: center;
-  padding: 0 1rem; /* Added padding for mobile */
+  padding: 0 1rem;
+  margin-top: auto; /* Push to bottom */
+  margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - Much tighter spacing */
 @media (max-width: 768px) {
   .entrance-container {
     justify-content: space-between; /* Better space distribution */
     padding-top: 3rem;
-    padding-bottom: 4rem; /* More space for footer */
+    padding-bottom: 1rem; /* Reduced bottom padding */
+  }
+
+  .entrance-content {
+    padding: 1rem;
+    justify-content: flex-start; /* Start from top */
+    padding-top: 1rem;
   }
 
   .company-name {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Smaller for mobile */
   }
 
   .tagline {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Smaller for mobile */
+    margin-top: 0.5rem;
   }
 
   .main-logo {
-    height: 150px;
+    height: 120px; /* Smaller for mobile */
   }
 
   .enter-btn {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .entrance-footer {
-    position: relative; /* Change to relative on mobile */
-    bottom: auto;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
   .company-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .tagline {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .main-logo {
-    height: 120px;
+    height: 100px;
   }
 
   .entrance-content {
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+
+  .entrance-footer {
+    font-size: 0.9rem;
   }
 }

@@ -1,23 +1,9 @@
 ﻿import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import './main-app.css'
 
 const MainApp = () => {
-  const navigate = useNavigate()
-
-  const goToEntrance = () => {
-    navigate('/')
-  }
-
   return (
     <div className="main-container">
-      {/* Back to entrance button */}
-      <div className="nav-header">
-        <button onClick={goToEntrance} className="back-button">
-          ← Back to Entrance
-        </button>
-      </div>
-
       {/* Header with ENHANCED microchip logo and title */}
       <div className="header-section">
         <img src="/es-logo.svg" alt="eS Logo" className="logo" />

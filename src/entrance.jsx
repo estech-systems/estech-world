@@ -5,8 +5,8 @@ import './entrance.css'
 const EntranceExperience = () => {
   const navigate = useNavigate()
 
-  const enterSite = () => {
-    navigate('/ecosystem')
+  const goToLogin = () => {
+    navigate('/login')
   }
 
   return (
@@ -24,8 +24,8 @@ const EntranceExperience = () => {
           <p className="tagline">Architecting Tomorrow&apos;s Digital Infrastructure</p>
         </div>
 
-        <button className="enter-btn" onClick={enterSite}>
-          Enter Ecosystem
+        <button className="enter-btn" onClick={goToLogin}>
+          Login to Ecosystem
         </button>
       </div>
 
