@@ -27,7 +27,9 @@ const EntranceExperience = () => {
         <button className="enter-btn" onClick={goToLogin}>
           Login to Ecosystem
         </button>
-
+          <br></br>
+          <br></br>
+          <br></br>
         {/* G9TE text positioned right after login button */}
         <div className="entrance-footer">
           <p>A G9TE WORLD Enterprise</p>

@@ -23,8 +23,8 @@ const Navigation = () => {
         
         {/* ROC number only shows on entrance page */}
         {isEntrancePage && (
-          <div className="roc-number">
-            ROC NO. 8956498
+          <div className="rc-number">
+            RC. NO - 8956498
           </div>
         )}
       </div>
