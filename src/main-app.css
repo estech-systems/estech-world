@@ -1,4 +1,17 @@
-﻿.nav-header {
+﻿/* Ensure body can scroll */
+body {
+  overflow-x: hidden;
+}
+
+.main-container {
+  min-height: 100vh;
+  background: #0a0a0f;
+  color: white;
+  position: relative;
+  padding: 1rem; /* Added padding for mobile */
+}
+
+.nav-header {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -25,6 +38,7 @@
 .header-section {
   text-align: center;
   margin-bottom: 1rem;
+  padding-top: 4rem; /* Space for navigation */
 }
 
 .logo {
@@ -72,6 +86,7 @@
 
 .cta-section {
   margin: 2rem 0;
+  padding: 0 1rem; /* Added padding for mobile */
 }
 
 .cta-title {
@@ -112,7 +127,7 @@
 
 .footer {
   margin-top: 3rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem; /* Added horizontal padding */
   border-top: 1px solid rgba(0,245,255,0.3);
   text-align: center;
 }
@@ -138,15 +153,70 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .main-container {
+    padding: 0.5rem;
+  }
+
+  .nav-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 1rem;
+  }
+
+  .header-section {
+    padding-top: 1rem;
+  }
+
   .logo {
     height: 80px;
   }
-  
+
   .main-title {
     font-size: 2.2rem;
   }
-  
+
   .ecosystem-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .ecosystem-card {
+    padding: 1rem;
+  }
+
+  .email-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .email-input {
+    min-width: 100%;
+    max-width: 300px;
+  }
+
+  .footer {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .cta-title {
+    font-size: 1.3rem;
   }
 }
