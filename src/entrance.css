@@ -19,7 +19,7 @@ body {
   text-align: center;
   position: relative;
   padding: 1rem;
-  padding-top: 3.5rem; /* Reduced space for fixed navigation */
+  padding-top: 3.5rem; /* Space for fixed navigation */
 }
 
 .cyber-grid {
@@ -45,20 +45,16 @@ body {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 1.5rem; /* Reduced padding */
+  padding: 1rem;
   width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .logo-section {
-  margin-bottom: 1.5rem; /* Reduced margin */
+  margin-bottom: 1.5rem;
 }
 
 .main-logo {
-  height: 150px; /* Slightly smaller for mobile */
+  height: 150px;
   filter: drop-shadow(0 0 25px rgba(0, 245, 255, 0.8));
   animation: chipGlow 3s ease-in-out infinite alternate;
 }
@@ -75,13 +71,13 @@ body {
 }
 
 .text-section {
-  margin-bottom: 2rem; /* Reduced margin */
+  margin-bottom: 2rem;
 }
 
 .company-name {
-  font-size: 3rem; /* Slightly smaller */
+  font-size: 3rem;
   font-weight: 700;
-  margin: 0.3rem 0; /* Reduced margin */
+  margin: 0.3rem 0;
   background: linear-gradient(135deg, #00f5ff 0%, #ffd700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -90,14 +86,14 @@ body {
 }
 
 .tagline {
-  font-size: 1.3rem; /* Slightly smaller */
+  font-size: 1.3rem;
   color: #ffd700;
-  margin-top: 0.8rem; /* Reduced margin */
+  margin-top: 0.8rem;
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
 .enter-btn {
-  padding: 1rem 2.5rem; /* Slightly smaller */
+  padding: 1rem 2.5rem;
   background: linear-gradient(45deg, #00f5ff, #00ff41);
   border: none;
   border-radius: 10px;
@@ -111,7 +107,7 @@ body {
   box-shadow: 0 0 25px rgba(0, 245, 255, 0.5);
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem; /* Space before footer */
+  margin-bottom: 1.5rem; /* Space before G9TE text */
 }
 
 .enter-btn:hover {
@@ -140,47 +136,42 @@ body {
   width: 100%;
   text-align: center;
   padding: 0 1rem;
-  margin-top: auto; /* Push to bottom */
-  margin-bottom: 1rem;
-  flex-shrink: 0;
 }
 
-/* Mobile Responsive - Much tighter spacing */
+/* Mobile Responsive - Tight spacing */
 @media (max-width: 768px) {
   .entrance-container {
-    justify-content: space-between; /* Better space distribution */
     padding-top: 3rem;
-    padding-bottom: 1rem; /* Reduced bottom padding */
+    padding-bottom: 1rem;
+    justify-content: flex-start;
   }
 
   .entrance-content {
-    padding: 1rem;
-    justify-content: flex-start; /* Start from top */
-    padding-top: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
   }
 
   .company-name {
-    font-size: 2.2rem; /* Smaller for mobile */
+    font-size: 2.2rem;
   }
 
   .tagline {
-    font-size: 1.1rem; /* Smaller for mobile */
+    font-size: 1.1rem;
     margin-top: 0.5rem;
   }
 
   .main-logo {
-    height: 120px; /* Smaller for mobile */
+    height: 120px;
   }
 
   .enter-btn {
     padding: 0.9rem 2rem;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .entrance-footer {
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
   }
 }
 
@@ -198,8 +189,9 @@ body {
     height: 100px;
   }
 
-  .entrance-content {
-    padding: 0.5rem;
+  .enter-btn {
+    padding: 0.8rem 1.8rem;
+    margin-bottom: 0.8rem;
   }
 
   .entrance-footer {
