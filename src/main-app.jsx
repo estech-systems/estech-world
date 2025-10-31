@@ -68,12 +68,12 @@ const MainApp = () => {
         <div className="footer">
           <p className="contact-info">
             Contact: {' '}
-            <a href="mailto:info.support@estech.cloud" className="contact-link">
-              info.support@estech.cloud
+            <a href="mailto:info@estech.cloud" className="contact-link">
+              info@estech.cloud
             </a>
           </p>
           <p className="parent-brand">A G9TE WORLD Enterprise</p>
-          <p className="copyright">© 2025 eSTech Systems. All rights reserved.</p>
+          <p className="copyright">© 2025 eSTech Systems. <br /> All rights reserved.</p>
         </div>
       </div>
     </div>
