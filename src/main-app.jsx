@@ -68,8 +68,8 @@ const MainApp = () => {
         <div className="footer">
           <p className="contact-info">
             Contact: {' '}
-            <a href="mailto:godwin.author@estech.cloud" className="contact-link">
-              godwin.author@estech.cloud
+            <a href="mailto:info.support@estech.cloud" className="contact-link">
+              info.support@estech.cloud
             </a>
           </p>
           <p className="parent-brand">A G9TE WORLD Enterprise</p>
