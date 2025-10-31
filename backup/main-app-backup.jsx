@@ -4,18 +4,18 @@ import './main-app.css'
 
 const MainApp = () => {
   const goToEntrance = () => {
+  // Clear any existing React roots
+  const existingRoot = document.getElementById("root");
+  if (existingRoot) {
+    existingRoot.innerHTML = "";
+  }
     window.location.href = '/'
   }
 
   return (
     <div className="main-container">
       {/* Back to entrance button */}
-      <div className="nav-header">
-        <button onClick={goToEntrance} className="back-button">
-          ← Back to Entrance
-        </button>
-      </div>
-
+      
       {/* Header with ENHANCED microchip logo and title */}
       <div className="header-section">
         <img src="/es-logo.svg" alt="eS Logo" className="logo" />

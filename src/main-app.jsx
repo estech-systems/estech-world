@@ -1,48 +1,50 @@
 ﻿import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { useNavigate } from 'react-router-dom'
 import './main-app.css'
 
 const MainApp = () => {
+  const navigate = useNavigate()
+
   const goToEntrance = () => {
-  // Clear any existing React roots
-  const existingRoot = document.getElementById("root");
-  if (existingRoot) {
-    existingRoot.innerHTML = "";
-  }
-    window.location.href = '/'
+    navigate('/')
   }
 
   return (
     <div className="main-container">
       {/* Back to entrance button */}
-      
+      <div className="nav-header">
+        <button onClick={goToEntrance} className="back-button">
+          ← Back to Entrance
+        </button>
+      </div>
+
       {/* Header with ENHANCED microchip logo and title */}
       <div className="header-section">
         <img src="/es-logo.svg" alt="eS Logo" className="logo" />
         <h1 className="main-title">eSTech Systems</h1>
       </div>
-      
+
       <div style={{ textAlign: 'center', maxWidth: '1200px', margin: '0 auto' }}>
         <p className="subtitle">
           Architecting the core infrastructure for a new digital era
         </p>
-        
+
         <div className="ecosystem-grid">
           <div className="ecosystem-card">
             <h3 className="card-title">eSPay</h3>
             <p>Next-generation payment infrastructure revolutionizing digital transactions across Africa.</p>
           </div>
-          
+
           <div className="ecosystem-card">
             <h3 className="card-title">eSSecure</h3>
             <p>Enterprise-grade security systems protecting the future of digital identity and data.</p>
           </div>
-          
+
           <div className="ecosystem-card">
             <h3 className="card-title">eSLearn</h3>
             <p>Empowering the next generation of African tech talent through cutting-edge education.</p>
           </div>
-          
+
           <div className="ecosystem-card">
             <h3 className="card-title">eSBuild</h3>
             <p>Modern construction, real estate development, and smart home automation systems for future cities.</p>
@@ -52,8 +54,8 @@ const MainApp = () => {
         <div className="cta-section">
           <h2 className="cta-title">Join the Digital Revolution</h2>
           <form className="email-form">
-            <input 
-              type="email" 
+            <input
+              type="email"
               placeholder="Enter your email for exclusive access"
               className="email-input"
             />
@@ -78,4 +80,4 @@ const MainApp = () => {
   )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<MainApp />)
+export default MainApp
