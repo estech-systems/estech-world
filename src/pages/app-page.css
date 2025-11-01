@@ -1,4 +1,4 @@
-﻿.app-page-container {
+.app-page-container {
   min-height: 100vh;
   background: #0a0a0f;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   position: relative;
   padding: 1rem;
-  padding-top: 4rem;
+  padding-top: 5rem; /* Increased from 4rem to 5rem */
 }
 
 .cyber-grid {
@@ -16,11 +16,12 @@
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(0, 245, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: gridMove 20s linear infinite;
   z-index: 1;
+  opacity: 0.6;
 }
 
 @keyframes gridMove {
@@ -31,7 +32,8 @@
 .app-page-content {
   position: relative;
   z-index: 2;
-  background: rgba(10, 10, 15, 0.9);
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
   padding: 3rem;
   border-radius: 15px;
   border: 1px solid #00f5ff;
@@ -91,9 +93,10 @@
 }
 
 .app-description-section p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
 .auth-section {
@@ -186,9 +189,18 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .app-page-content {
-    padding: 2rem 1.5rem;
-    margin: 1rem;
-  }
+  position: relative;
+  z-index: 2;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 15px;
+  border: 1px solid #00f5ff;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
 
   .app-title {
     font-size: 2rem;
@@ -245,5 +257,45 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(0, 245, 255, 0.2);
 }
+}
+
+
+
+
+/* Enhanced Button Styles */
+.enter-btn, .login-btn, .login-submit-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(45deg, #00f5ff, #00ff41);
+  border: none;
+  border-radius: 10px;
+  color: #0a0a0f;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.enter-btn:hover, .login-btn:hover, .login-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(0, 245, 255, 0.8), 0 0 50px rgba(0, 255, 65, 0.4);
+}
+
+.signup-btn, .social-auth-btn {
+  padding: 0.8rem 2rem;
+  background: rgba(0, 245, 255, 0.15);
+  border: 1px solid #00f5ff;
+  border-radius: 8px;
+  color: #00f5ff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover, .social-auth-btn:hover {
+  background: rgba(0, 245, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+  transform: translateY(-2px);
 }
 

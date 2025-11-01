@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react"
+import ReadMore from "../components/ReadMore"
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -30,16 +31,24 @@ const ESPay = () => {
         </div>
 
         <div className="app-description-section">
-          <h2>About eSPay</h2>
-          <p>
-            Next-generation payment infrastructure revolutionizing digital transactions across Africa. 
-            eSPay provides secure, fast, and reliable payment solutions for businesses and individuals.
-          </p>
-          <p>
-            Our platform supports multiple payment methods, real-time transactions, and advanced 
-            security features to ensure your financial data is always protected.
-          </p>
-        </div>
+  <h2>Revolutionary Payment Ecosystem</h2>
+  <p>
+    <strong>All-in-One Financial Hub:</strong> Local & international transfers, bill payments, 
+    cryptocurrency transactions, and virtual cards in one secure platform.
+  </p>
+  <p>
+    <strong>AI-Powered Trading:</strong> Automated trading bot with DeepSeek AI analysis. 
+    Start with just $10 and choose from multiple trading strategies.
+  </p>
+  <p>
+    <strong>Developer Friendly:</strong> Full API integration for payment gateway services 
+    in your applications. Open for community contributions.
+  </p>
+  <p>
+    <strong>Futuristic & Autonomous:</strong> AI-driven system that runs automatically, 
+    providing seamless financial experiences across all devices.
+  </p>
+</div>
 
         <div className="auth-section">
           <button className="google-auth-btn" onClick={handleGoogleAuth}>
@@ -71,5 +80,8 @@ const ESPay = () => {
 }
 
 export default ESPay
+
+
+
 
 

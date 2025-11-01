@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react"
+import ReadMore from "../components/ReadMore"
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -27,16 +28,9 @@ const ESBuild = () => {
           <p className="app-subtitle">Construction & Real Estate</p>
         </div>
 
-        <div className="app-description-section">
+                <div className="app-description-section">
           <h2>About eSBuild</h2>
-          <p>
-            Modern construction, real estate development, and smart home automation systems for future cities. 
-            eSBuild revolutionizes the construction industry with innovative solutions.
-          </p>
-          <p>
-            Our platform integrates smart technology, sustainable practices, and efficient project 
-            management to create the buildings and cities of tomorrow.
-          </p>
+          <ReadMore text="eSBuild provides cutting-edge solutions with advanced features and seamless user experience. Our platform offers comprehensive tools and services designed to meet modern digital needs with security, efficiency, and innovation at its core." />
         </div>
 
         <div className="auth-section">
@@ -69,6 +63,7 @@ const ESBuild = () => {
 }
 
 export default ESBuild
+
 
 
 

@@ -1,4 +1,5 @@
-﻿import React from 'react'
+import React from "react"
+import ReadMore from "../components/ReadMore"
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -16,7 +17,7 @@ const ESEntertainment = () => {
   return (
     <div className="app-page-container">
       <button className="back-home-btn" onClick={() => navigate("/ecosystem")}>
-        ← Back to Home
+        ? Back to Home
       </button>
       <div className="cyber-grid"></div>
 
@@ -27,16 +28,9 @@ const ESEntertainment = () => {
           <p className="app-subtitle">Digital Entertainment</p>
         </div>
 
-        <div className="app-description-section">
+                <div className="app-description-section">
           <h2>About eSEntertainment</h2>
-          <p>
-            Next-generation digital entertainment platform offering immersive experiences. 
-            eSEntertainment redefines how we consume and interact with media.
-          </p>
-          <p>
-            Our platform features streaming services, interactive content, gaming, 
-            and virtual experiences that push the boundaries of digital entertainment.
-          </p>
+          <ReadMore text="eSEntertainment provides cutting-edge solutions with advanced features and seamless user experience. Our platform offers comprehensive tools and services designed to meet modern digital needs with security, efficiency, and innovation at its core." />
         </div>
 
         <div className="auth-section">
@@ -69,5 +63,6 @@ const ESEntertainment = () => {
 }
 
 export default ESEntertainment
+
 
 

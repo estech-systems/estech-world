@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './entrance.css'
 
@@ -126,7 +126,7 @@ const EntranceExperience = () => {
 
         {/* Copyright */}
         <div className="copyright">
-          <p>© 2025 eSTech Systems. All rights reserved.</p>
+          <p>� 2025 eSTech Systems. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -134,3 +134,4 @@ const EntranceExperience = () => {
 }
 
 export default EntranceExperience
+

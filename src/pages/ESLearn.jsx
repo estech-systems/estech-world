@@ -1,4 +1,5 @@
-﻿import React from 'react'
+import React from "react"
+import ReadMore from "../components/ReadMore"
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -16,7 +17,7 @@ const ESLearn = () => {
   return (
     <div className="app-page-container">
       <button className="back-home-btn" onClick={() => navigate("/ecosystem")}>
-        ← Back to Home
+        ? Back to Home
       </button>
       <div className="cyber-grid"></div>
 
@@ -27,16 +28,9 @@ const ESLearn = () => {
           <p className="app-subtitle">Tech Education</p>
         </div>
 
-        <div className="app-description-section">
+                <div className="app-description-section">
           <h2>About eSLearn</h2>
-          <p>
-            Empowering the next generation of African tech talent through cutting-edge education. 
-            eSLearn provides comprehensive learning platforms for technology skills.
-          </p>
-          <p>
-            Our platform offers interactive courses, hands-on projects, and mentorship programs 
-            to help you master the latest technologies and advance your career.
-          </p>
+          <ReadMore text="eSLearn provides cutting-edge solutions with advanced features and seamless user experience. Our platform offers comprehensive tools and services designed to meet modern digital needs with security, efficiency, and innovation at its core." />
         </div>
 
         <div className="auth-section">
@@ -69,5 +63,6 @@ const ESLearn = () => {
 }
 
 export default ESLearn
+
 
 

@@ -1,4 +1,5 @@
-﻿import React from 'react'
+import React from "react"
+import ReadMore from "../components/ReadMore"
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -16,7 +17,7 @@ const ESSecure = () => {
   return (
     <div className="app-page-container">
       <button className="back-home-btn" onClick={() => navigate("/ecosystem")}>
-        ← Back to Home
+        ? Back to Home
       </button>
       <div className="cyber-grid"></div>
 
@@ -27,16 +28,9 @@ const ESSecure = () => {
           <p className="app-subtitle">Security & Identity</p>
         </div>
 
-        <div className="app-description-section">
+                <div className="app-description-section">
           <h2>About eSSecure</h2>
-          <p>
-            Enterprise-grade security systems protecting the future of digital identity and data. 
-            eSSecure provides advanced security solutions for businesses and individuals.
-          </p>
-          <p>
-            Our platform features multi-factor authentication, encryption, and real-time threat 
-            detection to ensure your digital assets are always protected.
-          </p>
+          <ReadMore text="eSSecure provides cutting-edge solutions with advanced features and seamless user experience. Our platform offers comprehensive tools and services designed to meet modern digital needs with security, efficiency, and innovation at its core." />
         </div>
 
         <div className="auth-section">
@@ -69,5 +63,6 @@ const ESSecure = () => {
 }
 
 export default ESSecure
+
 
 

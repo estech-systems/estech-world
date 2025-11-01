@@ -46,14 +46,11 @@ const Contact = () => {
   }
 
   return (
-    <div className="entrance-container">
+    <div className="main-container">
       <div className="cyber-grid"></div>
       
-      <div className="entrance-content">
+      <div className="contact-page-content">
         {/* Back Button - Fixed positioning */}
-        <button className="back-home-btn" onClick={() => navigate('/')} style={{position: 'fixed', top: '5.5rem', left: '1rem', zIndex: 1000}}>
-          Back to Entrance
-        </button>
 
         {/* Logo */}
         <div className="logo-section">
@@ -67,25 +64,25 @@ const Contact = () => {
         </div>
 
         {/* Contact Content */}
-        <div style={{maxWidth: '600px', margin: '0 auto 2rem auto'}}>
+        <div className="contact-content-wrapper">
           {/* Contact Information */}
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '2rem'}}>
-            <div style={{background: 'rgba(0, 245, 255, 0.1)', padding: '1.5rem', borderRadius: '10px', border: '1px solid #00f5ff', textAlign: 'center', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>
+          <div className="contact-grid">
+            <div className="contact-card">
               <h3 style={{color: '#ffd700', marginBottom: '1rem', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>General Inquiries</h3>
               <a href="mailto:info@estech.cloud" style={{color: '#00f5ff', textDecoration: 'none', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>info@estech.cloud</a>
             </div>
             
-            <div style={{background: 'rgba(0, 245, 255, 0.1)', padding: '1.5rem', borderRadius: '10px', border: '1px solid #00f5ff', textAlign: 'center', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>
+            <div className="contact-card">
               <h3 style={{color: '#ffd700', marginBottom: '1rem', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>Technical Support</h3>
               <a href="mailto:support@estech.cloud" style={{color: '#00f5ff', textDecoration: 'none', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>support@estech.cloud</a>
             </div>
 
-            <div style={{background: 'rgba(0, 245, 255, 0.1)', padding: '1.5rem', borderRadius: '10px', border: '1px solid #00f5ff', textAlign: 'center', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>
+            <div className="contact-card">
               <h3 style={{color: '#ffd700', marginBottom: '1rem', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>Contact Founder</h3>
               <a href="mailto:support@estech.cloud" style={{color: '#00f5ff', textDecoration: 'none', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>godwin.author@estech.cloud</a>
             </div>
 
-            <div style={{background: 'rgba(0, 245, 255, 0.1)', padding: '1.5rem', borderRadius: '10px', border: '1px solid #00f5ff', textAlign: 'center', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>
+            <div className="contact-card">
               <h3 style={{color: '#ffd700', marginBottom: '1rem', fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>Headquarters</h3>
               <p style={{color: 'rgba(255, 255, 255, 0.9)', margin: 0, fontFamily: "'Courier New', 'SF Mono', Monaco, 'Cascadia Code', monospace"}}>Gbaga, Ikorodu, Lagos, Nigeria</p>
             </div>
@@ -163,3 +160,15 @@ const Contact = () => {
 }
 
 export default Contact
+
+
+
+
+
+
+
+
+
+
+
+

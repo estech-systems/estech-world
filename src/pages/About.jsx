@@ -19,9 +19,6 @@ const About = () => {
       
       <div className="entrance-content">
         {/* Back Button - Fixed positioning */}
-        <button className="back-home-btn" onClick={() => navigate('/')} style={{position: 'fixed', top: '5.5rem', left: '1rem', zIndex: 1000}}>
-          Back to Entrance
-        </button>
 
         {/* Logo */}
         <div className="logo-section">
@@ -97,3 +94,5 @@ const About = () => {
 }
 
 export default About
+
+

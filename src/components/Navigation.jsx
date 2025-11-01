@@ -1,23 +1,25 @@
-﻿import React from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
-import './navigation.css'
+import React from "react"
+import { useNavigate, useLocation } from "react-router-dom"
+import "./navigation.css"
 
 const Navigation = () => {
   const navigate = useNavigate()
   const location = useLocation()
   
-  const isEntrancePage = location.pathname === '/'
-  const isLoginPage = location.pathname === '/login'
-  const isEcosystemPage = location.pathname === '/ecosystem'
+  const isEntrancePage = location.pathname === "/"
+  const isLoginPage = location.pathname === "/login"
+  const isEcosystemPage = location.pathname === "/ecosystem"
+  const isAboutPage = location.pathname === "/about"
+  const isContactPage = location.pathname === "/contact"
 
   return (
     <nav className="main-navigation">
       {/* Left Section - Different content based on page */}
       <div className="left-section">
-        {/* Back button shows on login and ecosystem pages */}
-        {(isLoginPage || isEcosystemPage) && (
-          <button className="back-button" onClick={() => navigate('/')}>
-            ← Back to Entrance
+        {/* Back button shows on login, ecosystem, about and contact pages */}
+        {(isLoginPage || isEcosystemPage || isAboutPage || isContactPage) && (
+          <button className="nav-back-button" onClick={() => navigate("/")}>
+            ? Back to Entrance
           </button>
         )}
         
@@ -34,8 +36,8 @@ const Navigation = () => {
         {/* On entrance and login pages: About & Contact */}
         {(isEntrancePage || isLoginPage) && (
           <>
-            <button className="nav-link" onClick={() => navigate('/about')}>About</button>
-            <button className="nav-link" onClick={() => navigate('/contact')}>Contact</button>
+            <button className="nav-link" onClick={() => navigate("/about")}>About</button>
+            <button className="nav-link" onClick={() => navigate("/contact")}>Contact</button>
           </>
         )}
         
@@ -43,16 +45,20 @@ const Navigation = () => {
         {isEcosystemPage && (
           <>
             <button className="nav-icon profile-icon">
-              👤
+              ??
             </button>
             <button className="nav-icon settings-icon">
-              ⚙️
+              ??
             </button>
           </>
         )}
+
+        {/* On about and contact pages: No additional buttons needed */}
       </div>
     </nav>
   )
 }
 
 export default Navigation
+
+

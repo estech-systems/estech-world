@@ -1,0 +1,34 @@
+.read-more-container {
+  width: 100%;
+}
+
+.read-more-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+.read-more-text.expanded {
+  display: block;
+  line-height: 1.6;
+}
+
+.read-more-btn {
+  background: rgba(0, 245, 255, 0.1);
+  border: 1px solid #00f5ff;
+  color: #00f5ff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  font-family: "Courier New", "SF Mono", Monaco, "Cascadia Code", monospace;
+}
+
+.read-more-btn:hover {
+  background: rgba(0, 245, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+}

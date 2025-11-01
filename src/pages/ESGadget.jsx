@@ -1,4 +1,5 @@
-﻿import React from 'react'
+import React from "react"
+import ReadMore from "../components/ReadMore"
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -16,7 +17,7 @@ const ESGadget = () => {
   return (
     <div className="app-page-container">
       <button className="back-home-btn" onClick={() => navigate("/ecosystem")}>
-        ← Back to Home
+        ? Back to Home
       </button>
       <div className="cyber-grid"></div>
 
@@ -27,16 +28,9 @@ const ESGadget = () => {
           <p className="app-subtitle">Smart Gadgets</p>
         </div>
 
-        <div className="app-description-section">
+                <div className="app-description-section">
           <h2>About eSGadget</h2>
-          <p>
-            Innovative smart gadgets and IoT devices for modern living. 
-            eSGadget brings cutting-edge technology to everyday life.
-          </p>
-          <p>
-            Our products include smart home devices, wearable technology, and connected 
-            gadgets that enhance productivity, security, and convenience.
-          </p>
+          <ReadMore text="eSGadget provides cutting-edge solutions with advanced features and seamless user experience. Our platform offers comprehensive tools and services designed to meet modern digital needs with security, efficiency, and innovation at its core." />
         </div>
 
         <div className="auth-section">
@@ -69,5 +63,6 @@ const ESGadget = () => {
 }
 
 export default ESGadget
+
 
 
