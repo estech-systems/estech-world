@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './app-page.css'
 
@@ -24,7 +24,7 @@ const ESPay = () => {
 
       <div className="app-page-content">
         <div className="app-header">
-          <div className="app-icon espay-icon"></div>
+          <div className="app-icon"><img src="/es-logo.svg" alt="eSPay" className="app-logo" /></div>
           <h1 className="app-title">eSPay</h1>
           <p className="app-subtitle">Digital Payment System</p>
         </div>
@@ -63,7 +63,7 @@ const ESPay = () => {
         </div>
 
         <button className="back-btn" onClick={() => navigate('/ecosystem')}>
-          ? Back to Ecosystem
+          ← Back to Ecosystem
         </button>
       </div>
     </div>
@@ -71,4 +71,5 @@ const ESPay = () => {
 }
 
 export default ESPay
+
 

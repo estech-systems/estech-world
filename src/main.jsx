@@ -10,6 +10,8 @@ import ESLearn from './pages/ESLearn'
 import ESBuild from './pages/ESBuild'
 import ESGadget from './pages/ESGadget'
 import ESEntertainment from './pages/ESEntertainment'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import Navigation from './components/Navigation'
 import './index.css'
 
@@ -27,11 +29,12 @@ function App() {
         <Route path="/esbuild" element={<ESBuild />} />
         <Route path="/esgadget" element={<ESGadget />} />
         <Route path="/esentertainment" element={<ESEntertainment />} />
-        <Route path="/about" element={<MainApp />} />
-        <Route path="/contact" element={<MainApp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+

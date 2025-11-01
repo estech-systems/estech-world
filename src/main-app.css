@@ -1,4 +1,4 @@
-﻿/* Ensure body can scroll */
+/* Ensure body can scroll */
 body {
   overflow-x: hidden;
 }
@@ -55,7 +55,7 @@ body {
   font-weight: 700;
   background: linear-gradient(135deg, #00f5ff 0%, #ffd700 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;background-clip: text;
   background-clip: text;
 }
 
@@ -213,6 +213,7 @@ body {
 }
 
 /* Mobile Responsive */
+/* Mobile Responsive - Modern Compact Layout */
 @media (max-width: 768px) {
   .main-container {
     padding: 0.5rem;
@@ -220,7 +221,140 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
   }
+
+  .header-section {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    height: 50px;
+    margin-bottom: 0.3rem;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .app-grid-container {
+    flex: 1;
+    padding: 0.5rem 0;
+  }
+
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    padding: 0 0.3rem;
+    max-width: 100%;
+    align-items: stretch;
+  }
+
+  .app-card {
+    padding: 0.8rem;
+    border-radius: 8px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .app-logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .app-name {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+
+  .app-description {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+/* Extra small mobile devices - Keep 3x2 grid */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .app-card {
+    padding: 0.7rem;
+    min-height: 110px;
+  }
+
+  .app-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .app-logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .app-name {
+    font-size: 0.75rem;
+  }
+
+  .app-description {
+    font-size: 0.6rem;
+  }
+}
+
+/* Very small screens - Still maintain 3x2 */
+@media (max-width: 360px) {
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+
+  .app-card {
+    padding: 0.6rem;
+    min-height: 100px;
+  }
+
+  .app-name {
+    font-size: 0.7rem;
+  }
+
+  .app-description {
+    font-size: 0.55rem;
+  }
+}
 
   .header-section {
     padding: 0.5rem 0;
@@ -275,7 +409,7 @@ body {
     margin-top: 2rem;
     padding: 1.5rem 1rem;
   }
-}
+
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
@@ -348,8 +482,150 @@ body {
 }
 
 /* Mobile responsive for back button */
+/* Mobile Responsive - Modern Compact Layout */
 @media (max-width: 768px) {
-  
+  .main-container {
+    padding: 0.5rem;
+    padding-top: 3.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .header-section {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    height: 50px;
+    margin-bottom: 0.3rem;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .app-grid-container {
+    flex: 1;
+    padding: 0.5rem 0;
+  }
+
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    padding: 0 0.3rem;
+    max-width: 100%;
+    align-items: stretch;
+  }
+
+  .app-card {
+    padding: 0.8rem;
+    border-radius: 8px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .app-logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .app-name {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+
+  .app-description {
+    font-size: 0.65rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
 }
+
+/* Extra small mobile devices - Keep 3x2 grid */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .app-card {
+    padding: 0.7rem;
+    min-height: 110px;
+  }
+
+  .app-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .app-logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .app-name {
+    font-size: 0.75rem;
+  }
+
+  .app-description {
+    font-size: 0.6rem;
+  }
+}
+
+/* Very small screens - Still maintain 3x2 */
+@media (max-width: 360px) {
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+
+  .app-card {
+    padding: 0.6rem;
+    min-height: 100px;
+  }
+
+  .app-name {
+    font-size: 0.7rem;
+  }
+
+  .app-description {
+    font-size: 0.55rem;
+  }
+}
+
+
+
 
 
