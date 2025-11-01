@@ -9,122 +9,196 @@ body {
   color: white;
   position: relative;
   padding: 1rem;
-  padding-top: 4rem; /* Space for fixed navigation */
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
 }
 
+/* Cyber Grid Background */
+.cyber-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
 .header-section {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem 0;
-  flex-shrink: 0; /* Prevent logo section from shrinking */
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
-  height: 100px;
+  height: 80px;
   margin-bottom: 0.5rem;
   filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.6));
 }
 
 .main-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
+  background: linear-gradient(135deg, #00f5ff 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #ffd700;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
-.content-section {
+/* App Grid Container */
+.app-grid-container {
   flex: 1;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0;
 }
 
-.ecosystem-grid {
+.app-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.ecosystem-card {
-  background: rgba(255,255,255,0.1);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #00f5ff;
-  text-align: center;
-}
-
-.card-title {
-  color: #ffd700;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.cta-section {
-  margin: 2rem 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   padding: 0 1rem;
 }
 
-.cta-title {
-  color: #ffd700;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-.email-form {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.email-input {
-  padding: 1rem;
-  border: 1px solid #00f5ff;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border-radius: 8px;
-  min-width: 280px;
-  font-size: 1rem;
-}
-
-.cyber-button {
-  padding: 1rem 2rem;
-  background: linear-gradient(45deg, #00f5ff, #00ff41);
-  border: none;
-  border-radius: 8px;
-  color: #0a0a0f;
-  font-weight: 700;
+/* App Card - 3D Modern Design */
+.app-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
   cursor: pointer;
-  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 245, 255, 0.1);
 }
 
+.app-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.app-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #00f5ff;
+  box-shadow: 
+    0 15px 40px rgba(0, 245, 255, 0.3),
+    0 0 30px rgba(0, 245, 255, 0.1),
+    inset 0 0 30px rgba(0, 245, 255, 0.1);
+}
+
+.app-card:hover::before {
+  left: 100%;
+}
+
+/* App Icons - All using eS Microchip Logo */
+.app-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+  border-radius: 20px;
+  background: rgba(0, 245, 255, 0.1);
+  border: 2px solid #00f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.6));
+}
+
+.app-logo {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.8));
+  transition: all 0.3s ease;
+}
+
+.app-card:hover .app-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.8));
+  background: rgba(0, 245, 255, 0.2);
+}
+
+.app-card:hover .app-logo {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(0, 245, 255, 1));
+}
+
+.app-name {
+  color: #00f5ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.app-card:hover .app-name {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.app-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Footer */
 .footer {
   margin-top: 3rem;
   padding: 2rem 1rem;
-  border-top: 1px solid rgba(0,245,255,0.3);
+  border-top: 1px solid rgba(0, 245, 255, 0.3);
   text-align: center;
-  flex-shrink: 0; /* Prevent footer from moving up */
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-link {
   color: #00f5ff;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .contact-link:hover {
   color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .parent-brand {
@@ -135,9 +209,10 @@ body {
 
 .copyright {
   opacity: 0.7;
+  font-size: 0.9rem;
 }
 
-/* Mobile Responsive - Better logo visibility */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .main-container {
     padding: 0.5rem;
@@ -149,11 +224,11 @@ body {
 
   .header-section {
     padding: 0.5rem 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .logo {
-    height: 70px;
+    height: 60px;
     margin-bottom: 0.3rem;
   }
 
@@ -164,27 +239,36 @@ body {
 
   .subtitle {
     font-size: 1rem;
-    margin-bottom: 1rem;
   }
 
-  .ecosystem-grid {
-    grid-template-columns: 1fr;
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
+    padding: 0 0.5rem;
   }
 
-  .ecosystem-card {
-    padding: 1rem;
+  .app-card {
+    padding: 1.2rem;
+    border-radius: 12px;
   }
 
-  .email-form {
-    flex-direction: column;
-    width: 100%;
+  .app-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.8rem;
   }
 
-  .email-input {
-    min-width: 100%;
-    max-width: 300px;
+  .app-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .app-name {
+    font-size: 1.1rem;
+  }
+
+  .app-description {
+    font-size: 0.8rem;
   }
 
   .footer {
@@ -203,15 +287,69 @@ body {
     font-size: 0.9rem;
   }
 
-  .card-title {
-    font-size: 1.1rem;
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 280px;
   }
 
-  .cta-title {
-    font-size: 1.3rem;
+  .app-card {
+    padding: 1rem;
   }
 
-  .logo {
-    height: 60px;
+  .app-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .app-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .app-name {
+    font-size: 1rem;
+  }
+
+  .app-description {
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+    padding: 1rem;
   }
 }
+
+/* Large screens - Better spacing */
+@media (min-width: 1200px) {
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .app-card {
+    padding: 2rem;
+  }
+}
+
+/* Very large screens */
+@media (min-width: 1400px) {
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+  }
+}
+
+
+.back-home-btn:hover {
+  background: rgba(0, 245, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+}
+
+/* Mobile responsive for back button */
+@media (max-width: 768px) {
+  
+}
+
+

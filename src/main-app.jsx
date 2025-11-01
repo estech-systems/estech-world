@@ -1,69 +1,101 @@
 ﻿import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './main-app.css'
 
 const MainApp = () => {
+  const navigate = useNavigate()
+
+  const apps = [
+    {
+      id: 'espay',
+      name: 'eSPay',
+      description: 'Digital Payment System',
+      route: '/espay'
+    },
+    {
+      id: 'essecure', 
+      name: 'eSSecure',
+      description: 'Security & Identity',
+      route: '/essecure'
+    },
+    {
+      id: 'eslearn',
+      name: 'eSLearn',
+      description: 'Tech Education', 
+      route: '/eslearn'
+    },
+    {
+      id: 'esbuild',
+      name: 'eSBuild',
+      description: 'Construction & Real Estate',
+      route: '/esbuild'
+    },
+    {
+      id: 'esgadget',
+      name: 'eSGadget', 
+      description: 'Smart Gadgets',
+      route: '/esgadget'
+    },
+    {
+      id: 'esentertainment',
+      name: 'eSEntertainment',
+      description: 'Digital Entertainment',
+      route: '/esentertainment'
+    }
+  ]
+
+  const handleAppClick = (app) => {
+    navigate(app.route)
+  }
+
   return (
     <div className="main-container">
-      {/* Header with ENHANCED microchip logo and title */}
+      {/* Cyber Grid Background */}
+      <div className="cyber-grid"></div>
+
+      {/* Header Section */}
       <div className="header-section">
         <img src="/es-logo.svg" alt="eS Logo" className="logo" />
-        <h1 className="main-title">eSTech Systems</h1>
+        <h1 className="main-title">eSTech Ecosystem</h1>
+        <p className="subtitle">Your Digital Solution's</p>
       </div>
 
-      <div style={{ textAlign: 'center', maxWidth: '1200px', margin: '0 auto' }}>
-        <p className="subtitle">
-          Architecting the core infrastructure for a new digital era
+      {/* App Grid */}
+      <div className="app-grid-container">
+        <div className="app-grid">
+          {apps.map((app) => (
+            <div 
+              key={app.id}
+              className="app-card"
+              onClick={() => handleAppClick(app)}
+            >
+              <div className="app-icon">
+                <img src="/es-logo.svg" alt={app.name} className="app-logo" />
+              </div>
+              <h3 className="app-name">{app.name}</h3>
+              <p className="app-description">{app.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="footer">
+        <p className="contact-info">
+          Contact: {' '}
+          <a href="mailto:info@estech.cloud" className="contact-link">
+            info@estech.cloud
+          </a>
         </p>
-
-        <div className="ecosystem-grid">
-          <div className="ecosystem-card">
-            <h3 className="card-title">eSPay</h3>
-            <p>Next-generation payment infrastructure revolutionizing digital transactions across Africa.</p>
-          </div>
-
-          <div className="ecosystem-card">
-            <h3 className="card-title">eSSecure</h3>
-            <p>Enterprise-grade security systems protecting the future of digital identity and data.</p>
-          </div>
-
-          <div className="ecosystem-card">
-            <h3 className="card-title">eSLearn</h3>
-            <p>Empowering the next generation of African tech talent through cutting-edge education.</p>
-          </div>
-
-          <div className="ecosystem-card">
-            <h3 className="card-title">eSBuild</h3>
-            <p>Modern construction, real estate development, and smart home automation systems for future cities.</p>
-          </div>
-        </div>
-
-        <div className="cta-section">
-          <h2 className="cta-title">Join the Digital Revolution</h2>
-          <form className="email-form">
-            <input
-              type="email"
-              placeholder="Enter your email for exclusive access"
-              className="email-input"
-            />
-            <button type="submit" className="cyber-button">
-              Get Early Access
-            </button>
-          </form>
-        </div>
-
-        <div className="footer">
-          <p className="contact-info">
-            Contact: {' '}
-            <a href="mailto:info@estech.cloud" className="contact-link">
-              info@estech.cloud
-            </a>
-          </p>
-          <p className="parent-brand">A G9TE WORLD Enterprise</p>
-          <p className="copyright">© 2025 eSTech Systems. <br /> All rights reserved.</p>
-        </div>
+        <p className="parent-brand">A G9TE WORLD Enterprise</p>
+        <p className="copyright">© 2025 eSTech Systems. All rights reserved.</p>
       </div>
     </div>
   )
 }
 
 export default MainApp
+
+
+
+

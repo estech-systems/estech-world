@@ -1,4 +1,4 @@
-﻿.login-container {
+﻿.app-page-container {
   min-height: 100vh;
   background: #0a0a0f;
   display: flex;
@@ -6,6 +6,7 @@
   align-items: center;
   position: relative;
   padding: 1rem;
+  padding-top: 4rem;
 }
 
 .cyber-grid {
@@ -27,7 +28,7 @@
   100% { transform: translate(50px, 50px); }
 }
 
-.login-content {
+.app-page-content {
   position: relative;
   z-index: 2;
   background: rgba(10, 10, 15, 0.9);
@@ -35,74 +36,90 @@
   border-radius: 15px;
   border: 1px solid #00f5ff;
   box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
-  max-width: 450px;
+  max-width: 500px;
   width: 100%;
   text-align: center;
 }
 
-.login-header {
+.app-header {
   margin-bottom: 2rem;
 }
 
-.login-logo {
+.app-icon {
+  width: 80px;
   height: 80px;
-  filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.6));
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  border-radius: 20px;
+  background: rgba(0, 245, 255, 0.1);
+  border: 2px solid #00f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.6));
 }
 
-.login-title {
+.espay-icon::before {
+  content: '??';
+  font-size: 2.5rem;
+}
+
+.app-title {
   color: #00f5ff;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #00f5ff 0%, #ffd700 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.login-options {
+.app-subtitle {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.app-description-section {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.app-description-section h2 {
+  color: #00f5ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.app-description-section p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.auth-section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.social-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.social-auth-btn {
-  padding: 1rem 1.5rem;
+.google-auth-btn {
+  padding: 1rem 2rem;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   color: #333;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  min-width: 180px;
   justify-content: center;
 }
 
-.social-auth-btn:hover {
+.google-auth-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.social-auth-btn.google {
-  background: white;
-  border: 1px solid #ddd;
-}
-
-.social-auth-btn.github {
-  background: #333;
-  border: 1px solid #333;
-  color: white;
 }
 
 .social-icon-img {
@@ -132,7 +149,7 @@
   font-size: 1rem;
 }
 
-.login-submit-btn {
+.login-btn {
   width: 100%;
   padding: 1rem 2rem;
   background: linear-gradient(45deg, #00f5ff, #00ff41);
@@ -145,55 +162,9 @@
   transition: all 0.3s ease;
 }
 
-.login-submit-btn:hover {
+.login-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
-}
-
-.social-icons {
-  margin: 2rem 0 1rem 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 245, 255, 0.3);
-}
-
-.social-icons-title {
-  color: #ffd700;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.social-icons-grid {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.social-icon-link {
-  width: 45px;
-  height: 45px;
-  background: rgba(0, 245, 255, 0.1);
-  border: 1px solid #00f5ff;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icon-link:hover {
-  background: rgba(0, 245, 255, 0.2);
-  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
-  transform: scale(1.1);
-}
-
-.social-icon-svg {
-  width: 24px;
-  height: 24px;
-  fill: #00f5ff;
 }
 
 .back-btn {
@@ -213,64 +184,22 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .login-content {
+  .app-page-content {
     padding: 2rem 1.5rem;
     margin: 1rem;
   }
 
-  .login-title {
-    font-size: 1.5rem;
+  .app-title {
+    font-size: 2rem;
   }
 
-  .social-buttons {
-    gap: 0.8rem;
+  .app-subtitle {
+    font-size: 1rem;
   }
 
-  .social-auth-btn {
-    padding: 0.8rem 1.2rem;
-    font-size: 0.85rem;
-    min-width: 140px;
-  }
-
-  .social-icon-link {
-    width: 40px;
-    height: 40px;
-  }
-
-  .social-icon-svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Extra small mobile devices - PROPERLY CENTERED */
-@media (max-width: 480px) {
-  .social-buttons {
-    flex-direction: column;
-    gap: 0.8rem;
-    align-items: center;
-    width: 100%;
-  }
-
-  .social-auth-btn {
-    width: 100%;
-    max-width: 220px;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  .social-icons-grid {
-    gap: 0.8rem;
-  }
-
-  .social-icon-link {
-    width: 38px;
-    height: 38px;
-  }
-
-  .social-icon-svg {
-    width: 18px;
-    height: 18px;
+  .app-icon {
+    width: 60px;
+    height: 60px;
   }
 }
 .back-home-btn {
